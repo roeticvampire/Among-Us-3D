@@ -86,8 +86,7 @@ public class SelectionManager : MonoBehaviour
         
         // if(Input.GetKeyDown(KeyCode.B)){
         //     outline.enabled=!outline.enabled;
-        if(_selection!=null){
-            _selection.GetComponent<Outline>().enabled=false;
+
             var color = ventImage.color;
             color.a = 0.125f; //higher than 0 otherwise it is invisible
             ventImage.color = color;
@@ -96,7 +95,7 @@ public class SelectionManager : MonoBehaviour
             color.a = 0.125f; //higher than 0 otherwise it is invisible
             useImage.color = color;
             _selection=null;
-        }
+        
         
        
         
@@ -108,13 +107,12 @@ public class SelectionManager : MonoBehaviour
             
             //For Tak interaction
             if(selection.CompareTag(selectableTag)){
-                selection.GetComponent<Outline>().enabled=true;
-                var color = useImage.color;
+                 color = useImage.color;
                 color.a = 1f; //higher than 0 otherwise it is invisible
                 useImage.color = color;
                 
                 taskScreen = canvasMap[selection.GetComponent<Identification>().interactable];
-                _selection=selection;
+                
 
                 if(Input.GetKeyDown(KeyCode.C)){
                     isWorkingOnTasks=true;
@@ -128,11 +126,9 @@ public class SelectionManager : MonoBehaviour
             }
             //Teleportation
             else if(selection.CompareTag(ventTag)){
-                var color = ventImage.color;
+                 color = ventImage.color;
                 color.a = 1f; //higher than 0 otherwise it is invisible
                 ventImage.color = color;
-                
-                selection.GetComponent<Outline>().enabled=true;
                 _selection=selection;
                 Transform ventDestination = selection.GetComponent<ventPairTarget>().VentPairTransform;
                 Debug.Log(ventDestination.position) ;
