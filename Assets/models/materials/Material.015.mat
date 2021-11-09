@@ -113,7 +113,7 @@ Material:
     - _ZTest: 0
     - _ZWrite: 1
     m_Colors:
-    - _BaseColor: {r: 0.7706521, g: 0.8000001, b: 0.010952457, a: 1}
+    - _BaseColor: {r: 0.9651741, g: 1, b: 0, a: 1}
     - _Color: {r: 0.89147705, g: 0.9063317, b: 0.105835624, a: 1}
     - _EmissionColor: {r: 0.14150941, g: 0.14150941, b: 0.14150941, a: 1}
     - _OutlineColor: {r: 1, g: 1, b: 1, a: 1}
